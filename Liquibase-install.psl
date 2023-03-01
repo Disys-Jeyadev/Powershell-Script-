@@ -1,0 +1,11 @@
+
+Invoke-WebRequest -Uri 'https://github.com/liquibase/liquibase/releases/download/liquibase-parent-4.5.0/liquibase-4.5.0.zip' -OutFile 'C:\Temp\liquibase.zip'
+
+
+Expand-Archive -Path 'C:\Temp\liquibase.zip' -DestinationPath 'C:\Program Files\Liquibase'
+
+
+[System.Environment]::SetEnvironmentVariable('Path', "$env:Path;C:\Program Files\Liquibase", [System.EnvironmentVariableTarget]::Machine)
+
+
+& 'C:\Program Files\Liquibase\liquibase.bat' --version
