@@ -1,5 +1,5 @@
 
-Invoke-WebRequest -Uri 'https://github.com/liquibase/liquibase/releases/download/liquibase-parent-4.5.0/liquibase-4.5.0.zip' -OutFile 'C:\Temp\liquibase.zip'
+Invoke-WebRequest -Uri 'https://github.com/liquibase/liquibase/releases/download/v4.19.1/liquibase-windows-x64-installer-4.19.1.exe' -OutFile 'C:\Temp\liquibase.zip'
 
 
 Expand-Archive -Path 'C:\Temp\liquibase.zip' -DestinationPath 'C:\Program Files\Liquibase'
