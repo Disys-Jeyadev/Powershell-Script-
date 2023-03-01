@@ -1,6 +1,6 @@
+$webClient = New-Object System.Net.WebClient
 
-Invoke-WebRequest -Uri 'https://github.com/liquibase/liquibase/releases/download/v4.19.1/liquibase-windows-x64-installer-4.19.1.exe' -OutFile 'C:\Temp\liquibase.zip'
-
+$webClient.DownloadFile('https://github.com/liquibase/liquibase/releases/download/v4.19.1/liquibase-windows-x64-installer-4.19.1.exe', 'C:\Temp\liquibase.zip')
 
 Expand-Archive -Path 'C:\Temp\liquibase.zip' -DestinationPath 'C:\Program Files\Liquibase'
 
