@@ -1,7 +1,7 @@
 --liquibase formatted sql
 
---changeset your.name:1 labels:example-label context:example-context
---comment: example comment
+--changeset Jeyadev labels:Person context:v.0.1
+--comment: v.0.1
 create table person (
     id int identity(1,1) primary key not null,
     name varchar(50) not null,
@@ -11,8 +11,8 @@ create table person (
 )
 --rollback DROP TABLE person;
 
---changeset your.name:2 labels:example-label context:example-context
---comment: example comment
+--changeset Jeyadev labels:Company context:v.0.1
+--comment: v.0.1
 create table company (
     id int identity(1,1) primary key not null,
     name varchar(50) not null,
@@ -22,8 +22,8 @@ create table company (
 )
 --rollback DROP TABLE company;
 
---changeset other.dev:3 labels:example-label context:example-context
---comment: example comment
+--changeset Jeyadev labels:Person context:v.0.1
+--comment: v.0.1
 alter table person add column country varchar(2)
 --rollback ALTER TABLE person DROP COLUMN country;
 
